@@ -1,0 +1,21 @@
+.nav {
+    background-color: lightgray;
+    margin-bottom: 10px;
+    border-bottom: 2px solid gray;
+    padding: 10px;
+
+    a, a:visited, a:link {
+        color: black;
+        margin-right: 8px;
+        border: 1px solid darkgray;
+        padding: 8px;
+        background-color: white;
+        border-radius: 6px;
+        text-decoration: none;
+
+        &.selected {
+            background-color: darkgray;
+            color: lightyellow;
+        }
+    }
+}

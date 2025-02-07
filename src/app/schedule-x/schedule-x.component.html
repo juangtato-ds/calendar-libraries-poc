@@ -1,0 +1,35 @@
+<h1>Schedule-x</h1>
+
+<div>
+    <p>Seems interesting, but there is a small <strong>bug</strong> when resizing.
+        Maybe is related to a callback implementation of the dummy implementation.
+    </p>
+    <ul>
+        <li><a href="https://schedule-x.dev/" target="_blank">Main page & demo</a></li>
+        <li><a href="https://schedule-x.dev/docs/frameworks/angular" target="_blank">Framework</a></li>
+        <li><a href="https://schedule-x.dev/docs/calendar/events" target="_blank">Events</a></li>
+        <li><a href="https://schedule-x.dev/premium" target="_blank">Premium (pay per developer/year)</a></li>
+    </ul>
+</div>
+
+<sx-calendar [calendarApp]="calendarApp">
+    <ng-template #timeGridEvent let-arg>
+        <div
+            style="background-color: #d6c5ea; border: 2px solid #856dc0; height: 100%; width: 100%; border-radius: 5px;padding: 5px">
+            <div>Time grid event: {{ arg.calendarEvent.title }}</div>
+        </div>
+    </ng-template>
+</sx-calendar>
+
+<hr/>
+
+<sx-calendar [calendarApp]="calendar2App">
+    <ng-template #timeGridEvent let-arg>
+        <div
+            style="background-color: #d6c5ea; border: 2px solid #856dc0; height: 100%; width: 100%; border-radius: 5px;padding: 5px">
+            <div>Time grid event: {{ arg.calendarEvent.title }}</div>
+            <div>{{ arg.calendarEvent.start.split(' ')[1] }}</div>
+            <div>{{ arg.calendarEvent.end.split(' ')[1] }}</div>
+        </div>
+    </ng-template>
+</sx-calendar>
