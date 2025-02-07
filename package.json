@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "predeploy": "npm run build",
-    "deploy": "ng deploy --dir=dist/calendar-poc/browser --base-href=/repo/"
+    "deploy": "ng deploy --dir=dist/calendar-poc/browser --base-href=/calendar-libraries-poc/"
   },
   "private": true,
   "dependencies": {
